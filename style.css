@@ -5,34 +5,31 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #333; /* Cor de fundo escuro para simular o ambiente do Figma */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 10px;
-    overflow: hidden;
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita rolagem indesejada */
+    height: 100%; /* Garante que html e body ocupem toda a altura */
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
 }
 
-/* CONTAINER PRINCIPAL DO APP (SIMULA O CELULAR) */
 .app-container {
-    width: 100%;
-    max-width: 375px; /* Largura padrão de um iPhone 8 */
-    height: 667px; /* Altura padrão de um iPhone 8 */
-    background-color: #00305F; /* Azul escuro principal, como no seu Figma */
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; /* Coloca os itens em coluna */
-    justify-content: flex-start; /* Alinha itens ao topo por padrão */
-    align-items: flex-start; /* Alinha itens à esquerda por padrão */
-    padding: 30px; /* Espaçamento interno padrão */
-}
+    /* Mude aqui para usar as novas unidades de viewport */
+    height: 100vh; /* Fallback para navegadores que não suportam */
+    height: 100svh; /* Altura da viewport "pequena", sem barras de navegador */
+    height: 100dvh; /* Altura dinâmica da viewport (varia com barras) */
 
+    width: 100%;
+    max-width: 400px; /* Mantém a largura de um celular */
+    margin: 0 auto;
+    background-color: #00305F; /* Cor de fundo principal do app */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden; /* Evita que o conteúdo interno ultrapasse */
+}
 /* Removemos .background-lines completamente (já que você removeu no seu código) */
 
 
