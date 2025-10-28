@@ -385,3 +385,289 @@ body {
     max-width: 320px; /* Limita a largura do conteúdo para um visual melhor */
     margin: 0 auto;   /* Centraliza o bloco 'content' dentro do app-container */
 }
+
+
+/* ESTILOS ESPECÍFICOS DA TELA "QR DO TURISTA" (Imagem 3) */
+.app-qr-turista-screen {
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 30px;
+    position: relative;
+}
+
+/* Ajuste específico para a seta de voltar nesta tela */
+.app-qr-turista-screen .back-arrow-container {
+    top: 30px;
+    left: 30px;
+    display: flex; /* Garante que seta e label apareçam */
+    gap: 10px;
+    align-items: center;
+}
+
+.app-qr-turista-screen .back-arrow-container .label {
+    display: block; /* Mostra o label "Meus Carimbos" */
+    font-size: 20px; /* Ajuste o tamanho da fonte se necessário */
+    font-weight: 500;
+}
+
+.app-qr-turista-screen .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    justify-content: flex-start; /* Alinha o conteúdo principal ao topo */
+    padding-top: 60px; /* Espaço para o título e elementos acima */
+}
+
+.app-qr-turista-screen .screen-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 50px; /* Espaço antes do QR Code */
+    padding: 0 10px; /* Espaçamento lateral para o texto */
+}
+
+.app-qr-turista-screen .qr-code-placeholder {
+    width: 220px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo claro para o QR Code */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; /* Espaço após o QR Code */
+}
+
+.app-qr-turista-screen .qr-code-icon {
+    width: 150px;
+    height: 150px;
+    /* Certifique-se de que seu arquivo qr-code-icon.png seja um QR Code visível */
+}
+
+.app-qr-turista-screen .share-qr-text {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 25px; /* Espaço antes do botão de compartilhar */
+}
+
+.app-qr-turista-screen .share-button {
+    width: 80%; /* Botão um pouco mais estreito */
+    max-width: 250px;
+}
+
+/* Remover o background-lines para esta tela específica, se ele estiver atrapalhando */
+/* Ou ajustar sua opacidade/posição se precisar que ele apareça sutilmente */
+.app-qr-turista-screen .background-lines {
+    display: none; /* Oculta as linhas de fundo nesta tela, se não forem necessárias */
+}
+
+/* ESTILOS ESPECÍFICOS DA TELA "ESCANEAR QR MOTORISTA" */
+.app-qr-motorista-scanner-screen {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+}
+
+.app-qr-motorista-scanner-screen .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 60px; /* Espaço para o título */
+}
+
+.app-qr-motorista-scanner-screen .screen-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.app-qr-motorista-scanner-screen .qr-code-placeholder {
+    width: 220px;
+    height: 220px;
+    background-color: rgba(255, 255, 255, 0.1); /* Um pouco mais escuro, simulando o "fundo" da câmera */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(255, 255, 255, 0.4); /* Borda tracejada */
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden; /* Garante que o ícone não saia da borda */
+}
+
+.app-qr-motorista-scanner-screen .scanner-icon {
+    width: 120px; /* Tamanho do ícone da câmera/scanner */
+    height: 120px;
+    filter: invert(1) opacity(0.6); /* Deixa o ícone branco e semi-transparente */
+}
+
+.app-qr-motorista-scanner-screen .scan-option-text {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Reutiliza .cadastro-form, input, etc. que já existem no style.css */
+.app-qr-motorista-scanner-screen .cadastro-form {
+    width: 100%;
+    max-width: 280px; /* Limita a largura do formulário de ID */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-qr-motorista-scanner-screen .cadastro-form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.app-qr-motorista-scanner-screen .cadastro-form input {
+    text-align: center; /* Centraliza o texto digitado */
+    letter-spacing: 2px; /* Mais espaçamento para o ID */
+}
+
+.app-qr-motorista-scanner-screen .app-button.primary {
+    margin-top: 0; /* Ajusta a margem do botão */
+    width: 100%;
+}
+
+/* Remover o background-lines para esta tela também */
+.app-qr-motorista-scanner-screen .background-lines {
+    display: none;
+}
+
+
+/* ESTILOS ESPECÍFICOS DA TELA "MEUS CARIMBOS" (Imagem 2) */
+.app-carimbos-screen {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    /* Fundo azul liso, sem background-lines */
+}
+
+.app-carimbos-screen .back-arrow-container {
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-carimbos-screen .back-arrow-container .label {
+    display: block; /* Mostra o label "Início" */
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.app-carimbos-screen .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 60px; /* Espaço para o título e seta */
+}
+
+.app-carimbos-screen .screen-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carimbos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 25px; /* Espaçamento entre os carimbos */
+    width: 100%;
+    max-width: 300px; /* Limita a largura da grade */
+}
+
+.carimbo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.carimbo-icon-container {
+    width: 110px; /* Tamanho do círculo do carimbo */
+    height: 110px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.carimbo-icon-container img {
+    width: 60px; /* Tamanho do ícone SVG/PNG dentro do círculo */
+    height: 60px;
+}
+
+.carimbo-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.3;
+}
+
+/* Estilo para Carimbo ADQUIRIDO (Colorido) */
+.carimbo-item.adquirido .carimbo-icon-container {
+    background-color: #FFC000; /* Fundo Dourado */
+}
+.carimbo-item.adquirido .carimbo-icon-container img {
+    filter: none; /* Cor original do ícone (se for colorido) */
+    /* Se o ícone for preto e precisar ficar azul: */
+    /* filter: invert(15%) sepia(80%) saturate(2500%) hue-rotate(190deg) brightness(80%) contrast(100%); */
+}
+.carimbo-item.adquirido .carimbo-label {
+    color: #FFC000; /* Texto Dourado */
+}
+
+/* Estilo para Carimbo BLOQUEADO (Cinza/Desativado) */
+.carimbo-item.bloqueado .carimbo-icon-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo cinza/transparente */
+}
+.carimbo-item.bloqueado .carimbo-icon-container img {
+    filter: invert(1); /* Deixa o ícone branco */
+    opacity: 0.5; /* Deixa o ícone mais apagado */
+}
+.carimbo-item.bloqueado .carimbo-label {
+    color: #fff;
+    opacity: 0.6; /* Deixa o texto mais apagado */
+}
+
+/* Botão Fixo no Rodapé */
+.fixed-bottom-button {
+    position: absolute;
+    bottom: 30px; /* Distância do fundo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Largura do botão */
+    max-width: 280px;
+}
