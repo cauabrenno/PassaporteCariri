@@ -671,3 +671,233 @@ body {
     width: 80%; /* Largura do botão */
     max-width: 280px;
 }
+
+/* AJUSTES ESPECÍFICOS PARA A TELA "MINHA TRAJETÓRIA" (AGORA É A SUA IMAGEM 1) */
+.app-carimbos-screen .screen-title { /* Renomeie esta classe para .app-trajetoria-screen */
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Renomeie a classe principal se renomeou o arquivo, ex: .app-trajetoria-screen */
+.app-container.app-carimbos-screen { /* Mude para .app-container.app-trajetoria-screen se renomear o arquivo */
+    /* ... (Mantenha os estilos existentes para a tela de grade) ... */
+}
+
+/* Remover a borda azul e corrigir o botão "Minha Trajetória" */
+.fixed-bottom-button {
+    position: absolute;
+    bottom: 30px; /* Distância do fundo */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza perfeitamente */
+    width: 85%; /* Ajuste a largura para o que for melhor visualmente */
+    max-width: 300px; /* Limita a largura máxima */
+    box-shadow: none; /* Garante que não há sombra que possa confundir */
+    z-index: 10; /* Garante que o botão esteja acima de outros elementos */
+    background-color: #FFC000; /* Cor normal */
+    border: none; /* Sem borda */
+}
+
+.fixed-bottom-button:hover,
+.fixed-bottom-button:focus {
+    background-color: #e6b000; /* Um pouco mais escuro no hover */
+    transform: translateX(-50%) translateY(-2px); /* Efeito sutil no hover */
+    outline: none; /* Remove outline padrão do foco */
+    border: none;
+}
+
+/* Ajustes para os labels dos carimbos (já que você os removeu do HTML) */
+.carimbo-item .carimbo-label {
+    display: none; /* Garante que não apareçam, caso ainda haja algum estilo */
+}
+
+/* Atualize o href do botão que leva para esta tela */
+/* Em qr-do-turista.html (se for para lá) ou tela-inicial-turista.html */
+/* O botão "Minha Trajetória" dentro de meus-carimbos.html (novo) levará para aqui */
+
+/* ESTILOS ESPECÍFICOS DA TELA "MEUS CARIMBOS" (AGORA É A SUA IMAGEM 2) */
+.app-carimbos-selos-screen {
+    justify-content: flex-start;
+    align-items: flex-start; /* Conteúdo alinhado à esquerda por padrão */
+    padding: 30px;
+    position: relative;
+    overflow: hidden; /* Importante para as imagens saírem da tela */
+}
+
+/* Remover o back-arrow-container para esta tela, se não houver na imagem 2 */
+.app-carimbos-selos-screen .back-arrow-container {
+    top: 30px;
+    left: 30px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.app-carimbos-selos-screen .content {
+    width: 100%;
+    position: relative;
+    z-index: 2; /* Acima das listras de fundo */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o título à esquerda */
+    padding-top: 60px; /* Espaço para o título e seta */
+}
+
+.app-carimbos-selos-screen .screen-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: left; /* Título alinhado à esquerda */
+    margin-bottom: 30px;
+    padding-left: 0; /* Remove padding extra se houver */
+}
+
+.selos-container {
+    position: absolute; /* Posição absoluta para espalhar os selos */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden; /* Corta selos que saem da tela */
+}
+
+.selo {
+    position: absolute;
+    width: 140px; /* Tamanho base dos selos */
+    height: auto;
+    transform-origin: center; /* Ponto de rotação no centro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    border-radius: 5px; /* Levemente arredondado, se as imagens permitirem */
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3)); /* Sombra para simular o levantamento */
+    transition: transform 0.3s ease-out; /* Animação suave */
+}
+
+/* Posicionamento e rotação individual de cada selo (ajuste conforme o Figma) */
+.selo-1 { top: 120px; left: -10px; transform: rotate(-15deg); width: 180px;}
+.selo-2 { top: 90px; right: 0px; transform: rotate(10deg); width: 150px;}
+.selo-3 { top: 220px; left: 60px; transform: rotate(5deg); width: 160px;}
+.selo-4 { top: 300px; right: -20px; transform: rotate(-8deg); width: 170px;}
+.selo-5 { bottom: 180px; left: -30px; transform: rotate(12deg); width: 170px;}
+.selo-6 { bottom: 100px; right: 30px; transform: rotate(-10deg); width: 160px;}
+/* Ajuste esses valores de top, left, right, bottom e transform para cada selo
+   para que eles se pareçam com a sua Imagem 2. */
+
+
+/* Estilo para as listras de fundo (da Imagem 2) */
+.background-stripes {
+    position: absolute;
+    bottom: -50px; /* Posição da base das listras */
+    left: 0;
+    width: 100%;
+    height: 200px; /* Altura da área das listras */
+    overflow: hidden;
+    z-index: 1; /* Abaixo dos carimbos/conteúdo */
+    /* Este é um exemplo, você pode precisar ajustar as cores e ângulos */
+    background: linear-gradient(
+        -45deg,
+        #FFC000 20%, /* Dourado */
+        #00305F 20%, #00305F 40%, /* Azul */
+        #FFC000 40%, #FFC000 60%, /* Dourado */
+        #00305F 60%, #00305F 80%, /* Azul */
+        #FFC000 80% /* Dourado */
+    );
+    background-size: 100% 100px; /* Ajuste para controlar a altura das listras */
+    transform: skewY(-15deg); /* Inclina as listras */
+    transform-origin: bottom left;
+}
+
+/* ESTILOS ESPECÍFICOS DA TELA "MEUS CARIMBOS" (IMAGEM 2) */
+
+/* ... (Mantenha o resto dos estilos da tela, como .app-carimbos-selos-screen, .screen-title, etc.) ... */
+
+/* Ajustes para os selos individuais */
+.selo {
+    position: absolute;
+    height: auto; /* Mantém a proporção da imagem */
+    transform-origin: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease-out;
+}
+
+/* Posicionamento e rotação individual de cada selo (AJUSTADO PARA A SUA IMAGEM) */
+.selo-1 { /* Santuário de São Francisco */
+    width: 140px; /* Ajuste o tamanho */
+    top: 120px;
+    left: -10px;
+    transform: rotate(-15deg);
+    z-index: 6; /* Garante que este selo esteja em cima de outros se necessário */
+}
+
+.selo-2 { /* Teleférico do Horto */
+    width: 140px; /* Ajuste o tamanho */
+    top: 120px;
+    right: 20px;
+    transform: rotate(10deg);
+    z-index: 5;
+}
+
+.selo-3 { /* Cascata do Crato */
+    width: 140px; /* Ajuste o tamanho */
+    top: 270px;
+    left: 0px; /* Mais para a direita para não cobrir o selo 1 */
+    transform: rotate(0deg); /* Sem rotação ou leve */
+    z-index: 4;
+}
+
+.selo-4 { /* Geopark Araripe */
+    width: 140px; /* Um pouco maior */
+    bottom: 120px; /* Mais acima */
+    right: 0px; /* Colocado mais à direita, saindo um pouco */
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+.selo-5 { /* Estátua do Padre Cícero (assumi que é a que está mais à esquerda na parte de baixo, meio escondida) */
+    width: 140px; /* Tamanho */
+    bottom: 80px; /* Mais para cima */
+    left: -20px; /* Fora da tela, como na imagem */
+    transform: rotate(15deg);
+    z-index: 2;
+    opacity: 0.8; /* Um pouco mais transparente, como se estivesse mais no fundo */
+}
+
+.selo-6 { /* Garagem Lab */
+    width: 140px; /* Tamanho */
+    bottom: -0px; /* Mais para cima */
+    left: 50px; /* Posição central-inferior */
+    transform: rotate(5deg);
+    z-index: 7; /* Mais para frente para cobrir outros */
+}
+
+/* Ajustes das listras de fundo, se necessário, para que não cubram os carimbos */
+.background-stripes {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    z-index: 1; /* Garante que as listras fiquem sempre atrás dos selos */
+    background: linear-gradient(
+        -45deg,
+        #FFC000 20%,
+        #00305F 20%, #00305F 40%,
+        #FFC000 40%, #FFC000 60%,
+        #00305F 60%, #00305F 80%,
+        #FFC000 80%
+    );
+    background-size: 100% 100px;
+    transform: skewY(-15deg);
+    transform-origin: bottom left;
+}
+
+/* Ajuste o z-index do .content também para garantir que o título e a seta estejam acima dos selos */
+.app-carimbos-selos-screen .content {
+    /* ... estilos existentes ... */
+    z-index: 10; /* Garante que o título e seta de voltar estejam acima de tudo */
+}
