@@ -849,24 +849,23 @@ html, body {
 .selo-4 { /* Geopark Araripe */
     width: 140px; /* Um pouco maior */
     bottom: 120px; /* Mais acima */
-    right: 0px; /* Colocado mais à direita, saindo um pouco */
+    right: 30px; /* Colocado mais à direita, saindo um pouco */
     transform: rotate(-5deg);
     z-index: 3;
 }
 
 .selo-5 { /* Estátua do Padre Cícero (assumi que é a que está mais à esquerda na parte de baixo, meio escondida) */
     width: 140px; /* Tamanho */
-    bottom: 80px; /* Mais para cima */
-    left: -20px; /* Fora da tela, como na imagem */
+    bottom: 20px; /* Mais para cima */
+    left: 180px; /* Fora da tela, como na imagem */
     transform: rotate(15deg);
     z-index: 2;
-    opacity: 0.8; /* Um pouco mais transparente, como se estivesse mais no fundo */
 }
 
 .selo-6 { /* Garagem Lab */
     width: 140px; /* Tamanho */
-    bottom: -0px; /* Mais para cima */
-    left: 50px; /* Posição central-inferior */
+    bottom: 60px; /* Mais para cima */
+    left: 0px; /* Posição central-inferior */
     transform: rotate(5deg);
     z-index: 7; /* Mais para frente para cobrir outros */
 }
