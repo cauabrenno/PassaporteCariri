@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passaporte Cariri - Cadastro Motorista</title>
+    <title>Passaporte Cariri - Turista Sem Motorista</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="app-container app-cadastro-motorista-screen">
-        <a href="index.html" class="back-arrow-container">
+    <div class="app-container app-cadastro-turista-screen">
+        <a href="como-voce-vem.html" class="back-arrow-container">
             <span class="arrow"></span>
         </a>
 
@@ -23,33 +23,40 @@
                 <img src="assets/avatar.png" alt="Ícone de Câmera" class="camera-icon">
             </div>
 
-            <form class="cadastro-form">
+            <form class="cadastro-form" onsubmit="window.location.href='qr-do-turista.html'; return false;">
                 <div class="form-group">
                     <input type="text" placeholder="Nome:">
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Sexo:</option>
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option>
+                        <option value="O">Outro</option>
+                        <option value="P">Prefiro não informar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Data de nascimento: (DD/MM/AAAA)" onfocus="(this.type='date')" onblur="(this.type='text')">
                 </div>
                 <div class="form-group-inline">
                     <div class="form-group">
                         <select>
                             <option value="">Cidade:</option>
-                            </select>
+                        </select>
                     </div>
                     <div class="form-group">
                         <select>
                             <option value="">Estado:</option>
-                            </select>
+                        </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Tipo do Veículo:">
-                </div>
-                <div class="form-group">
-                    <input type="number" placeholder="Quantidade de passageiros:">
-                </div>
-                <a href="qr-motorista.html" class="app-button primary">Cadastrar</a>
+                <button type="submit" class="app-button primary">Cadastrar</button>
             </form>
         </div>
 
-        <div class="background-lines"></div> </div>
+        <div class="background-lines"></div>
+    </div>
 
 </body>
 </html>
