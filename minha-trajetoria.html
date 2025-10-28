@@ -1,73 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passaporte Cariri - Meus Carimbos</title>
+    <title>Passaporte Cariri - Minha Trajetória</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="app-container app-carimbos-screen">
-        <a href="tela-inicial-turista.html" class="back-arrow-container">
+    <div class="app-container app-minha-trajetoria-mapa-screen">
+        <a href="home-turista.html" class="back-arrow-container">
             <span class="arrow"></span>
-            <span class="label">Início</span>
+            <span class="label">Inicio</span>
         </a>
 
         <div class="content">
-            <h1 class="screen-title">Meus Carimbos</h1>
+            <h1 class="screen-title">Minha Trajetória</h1>
+            
+            <div class="mapa-placeholder">
+                <img src="assets/mapa-cariri-placeholder.png" alt="Mapa da Trajetória" class="mapa-image">
+                
+                <div class="ponto-marcado" style="top: 25%; left: 45%;"></div> 
+                
+                <div class="ponto-marcado adquirido" style="top: 35%; left: 80%;"></div>
+                
+                <div class="ponto-marcado" style="top: 75%; left: 48%;"></div>
+                
 
-            <div class="carimbos-grid">
-
-                <div class="carimbo-item adquirido">
-                    <div class="carimbo-icon-container">
-                        <img src="assets/estátua.png" alt="Carimbo Horto">
-                    </div>
-                    <span class="carimbo-label">Horto</span>
-                </div>
-
-                <div class="carimbo-item bloqueado">
-                    <div class="carimbo-icon-container">
-                        <img src="assets/teleférico do horto.png" alt="Carimbo Basílica">
-                    </div>
-                    <span class="carimbo-label">Santuario São Fransico</span>
-                </div>
-
-                <div class="carimbo-item bloqueado">
-                    <div class="carimbo-icon-container">
-                        <img src="assets/geopark.png" alt="Carimbo Museu">
-                    </div>
-                    <span class="carimbo-label">Geopark</span>
-                </div>
-
-                <div class="carimbo-item bloqueado">
-                    <div class="carimbo-icon-container">
-                        <img src="assets/carimbo-geopark.svg" alt="Carimbo Geopark">
-                    </div>
-                    <span class="carimbo-label">Geopark</span>
-                </div>
-
-                <div class="carimbo-item bloqueado">
-                    <div class="carimbo-icon-container">
-                        <img src="assets/cascata do crato.png" alt="Cascata do crato">
-                    </div>
-                    <span class="carimbo-label">Castata do Crato</span>
-                </div>
             </div>
 
-            <div class="carimbo-item adquirido">
-                <div class="carimbo-icon-container">
-                    <img src="assets/garagem lab.png" alt="garagem Lab">
-                </div>
-                <span class="carimbo-label">Garagem Lab</span>
+            <div class="trajetoria-info">
+                <p><strong>Distância Total:</strong> 10 km</p>
+                <p><strong>Locais Visitados:</strong> 3</p>
             </div>
-
-            <a href="minha-trajetoria.html" class="app-button primary fixed-bottom-button">Minha Trajetória</a>
+            
+            <button class="app-button primary">Ver Detalhes</button>
         </div>
     </div>
 
 </body>
-
 </html>

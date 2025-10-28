@@ -901,3 +901,294 @@ body {
     /* ... estilos existentes ... */
     z-index: 10; /* Garante que o título e seta de voltar estejam acima de tudo */
 }
+
+/* ESTILOS ESPECÍFICOS DA TELA "MINHA TRAJETÓRIA" (MAPA ESTILO STRAVA) */
+.app-minha-trajetoria-mapa-screen {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+}
+
+.app-minha-trajetoria-mapa-screen .back-arrow-container {
+    top: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.app-minha-trajetoria-mapa-screen .back-arrow-container .label {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.app-minha-trajetoria-mapa-screen .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 60px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.app-minha-trajetoria-mapa-screen .screen-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mapa-placeholder {
+    width: 100%;
+    height: 300px; /* Altura do espaço do mapa */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    position: relative; /* Para posicionar os pontos marcados */
+    overflow: hidden; /* Garante que a imagem do mapa se encaixe */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mapa-placeholder .mapa-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobre todo o placeholder */
+    border-radius: 15px;
+    opacity: 0.7; /* Mapa um pouco transparente */
+}
+
+.ponto-marcado {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #FFC000; /* Cor do ponto marcado */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 3px rgba(255, 192, 0, 0.4); /* Efeito de pulsação/realce */
+    transform: translate(-50%, -50%); /* Centraliza o ponto na coordenada */
+    z-index: 5;
+}
+
+/* Opcional: pontos adquiridos podem ter uma cor diferente ou um ícone */
+.ponto-marcado.adquirido {
+    background-color: #008000; /* Verde para locais já visitados */
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.4);
+}
+
+
+.trajetoria-info {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.trajetoria-info p {
+    margin-bottom: 5px;
+}
+.trajetoria-info p:last-child {
+    margin-bottom: 0;
+}
+
+.app-minha-trajetoria-mapa-screen .app-button.primary {
+    width: 100%;
+    max-width: 280px;
+}
+
+/* No seu style.css, dentro dos estilos da tela .app-minha-trajetoria-mapa-screen */
+
+.mapa-placeholder {
+    /* ... estilos existentes ... */
+    margin-bottom: 50px; /* Mais espaço para o label e para o info box */
+}
+
+.mapa-placeholder .mapa-image {
+    /* ... estilos existentes ... */
+    opacity: 1; /* Remova a opacidade para a imagem aparecer clara como na sua foto */
+}
+
+/* Estilo para o label do mapa */
+.mapa-placeholder .map-label {
+    position: absolute;
+    bottom: 15px; /* Distância do fundo do placeholder */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    color: #fff; /* Cor do texto */
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo sutil para legibilidade */
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+/* Ajuste dos pontos (Cor Amarela para não adquirido, Verde para adquirido) */
+.ponto-marcado {
+    position: absolute;
+    width: 20px; /* Tamanho do ponto */
+    height: 20px;
+    background-color: #FFC000; /* Amarelo/Dourado para pontos não adquiridos */
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 3px rgba(255, 192, 0, 0.4); /* Efeito de pulsação/realce */
+    transform: translate(-50%, -50%); /* Centraliza o ponto na coordenada */
+    z-index: 5;
+}
+
+/* Opcional: pontos adquiridos podem ter uma cor diferente ou um ícone */
+.ponto-marcado.adquirido {
+    background-color: #008000; /* Verde para locais já visitados, como na sua imagem */
+    box-shadow: 0 0 0 3px rgba(0, 128, 0, 0.4);
+}
+
+/* Ajuste do botão inferior */
+.app-minha-trajetoria-mapa-screen .app-button.primary {
+    margin-top: 30px; /* Mais espaço acima do botão */
+}
+
+/* Ajuste para o texto de informações (trajetoria-info) */
+.app-minha-trajetoria-mapa-screen .trajetoria-info {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px; /* Mais próximo do botão */
+    color: #fff;
+    font-size: 16px;
+}
+
+/* ESTILOS ESPECÍFICOS DA TELA "HOME DO TURISTA" (DASHBOARD) */
+.app-home-turista-screen {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+}
+
+.app-home-turista-screen .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 60px; /* Espaço para o título */
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.app-home-turista-screen .screen-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.app-home-turista-screen .subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.app-home-turista-screen .dashboard-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.app-home-turista-screen .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 10px;
+    flex: 1; /* Ocupa o espaço igualmente */
+}
+
+.app-home-turista-screen .stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FFC000;
+    margin-bottom: 5px;
+}
+
+.app-home-turista-screen .stat-label {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+.app-home-turista-screen .buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Ajuste a cor do botão secundário para o dashboard, se necessário */
+.app-button.secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+}
+
+.app-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Opcional: imagem de fundo para o dashboard */
+/* .app-home-turista-screen .dashboard-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.2;
+} */
+
+a{
+    text-decoration: none;
+}
+
+/* CORREÇÃO PARA MOSTRAR O LABEL "INÍCIO" NA TELA "MEUS CARIMBOS" (SELOS) */
+
+.app-carimbos-selos-screen .back-arrow-container {
+    /* Garante que o container tenha espaço para o label */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10; /* Mantém acima dos selos */
+}
+
+.app-carimbos-selos-screen .back-arrow-container .label {
+    display: block; /* <-- ESTA É A CORREÇÃO PRINCIPAL */
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 1;
+}
+
